@@ -1,0 +1,45 @@
+
+.grid {
+  display:flex;
+  flex-wrap: wrap;
+  height: 458px; /*images plus padding*/
+  width: 616px; /*images plus padding*/
+  margin: auto;
+}
+
+.image {
+  display: block;
+  max-height: 150px;
+  max-width: 150px;
+  cursor: pointer;
+  padding: 2px;
+}
+.image:active {
+  transition: all 0.1s ease;
+  transform: rotateY(180deg);
+}
+
+body {
+  background-image: url("images/background.png");
+  background-size: 78%;
+  text-align: center;
+  font-size: large;
+}
+
+#newGame {
+  background-color:white;
+  color: black;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border-color: black;
+  font-size: large;
+  visibility: hidden;
+  margin: 10px;
+  cursor: pointer;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+}
+
+#message {
+  color: white;
+  font-weight: normal;
+}
