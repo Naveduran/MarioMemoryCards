@@ -21,7 +21,8 @@
 
 body {
   background-image: url("images/background.png");
-  background-size: 78%;
+  background-repeat: no-repeat;
+  background-size: 100%;
   text-align: center;
   font-size: large;
 }
@@ -42,4 +43,11 @@ body {
 #message {
   color: white;
   font-weight: normal;
+}
+
+footer {
+  background-color: hsla(0, 0%, 100%, 0);
+  width: 20%;
+  align-self: left;
+  float: right;
 }
