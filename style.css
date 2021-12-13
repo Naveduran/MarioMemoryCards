@@ -1,4 +1,3 @@
-
 .grid {
   display:flex;
   flex-wrap: wrap;
@@ -46,10 +45,22 @@ body {
 footer {
   background-color: hsla(0, 0%, 100%, 0);
   width: 250px;
-  float: right;
   color: blue;
+  float: right;
 }
 
 #icon {
   visibility: hidden;
+}
+
+h3{
+  margin: 10px;
+}
+
+p {
+  margin: 5px;
+}
+
+button {
+  margin: 5px;
 }
