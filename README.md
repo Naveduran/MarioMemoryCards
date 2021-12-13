@@ -9,6 +9,8 @@ Train your memory discovering the hidden images behing the question mark boxes a
 
 ## Play!
 
+Go to: https://naveduran.github.io/MarioMemoryCards/
+
 Download the files and open the "index.html" on your web broser.
 
 ```
