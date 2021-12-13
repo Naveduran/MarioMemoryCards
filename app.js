@@ -27,9 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const grid = document.querySelector('.grid');
   const resultDisplay = document.querySelector('#result');
   const messageDisplay = document.querySelector('#message');
-  const newGame= document.querySelector('#newGame');
-  let flipable = true;
 
+  let flipable = true;
 
   // Give a random order to the group of cards in each refresh
   cardArray.sort(() => 0.5 - Math.random());
@@ -46,6 +45,16 @@ document.addEventListener('DOMContentLoaded', () => {
       grid.appendChild(card);
     } 
   }
+
+  function cleanBoard() {
+    let oldimages = document.getElementsByClassName("image");
+    oldimages.forEach(card.remove())
+    createBoard();
+  }
+
+  createBoard();
+  const newGame= document.querySelector('#newGame');
+  newGame.addEventListener('click', cleanBoard);
 
   //Check for matches between two flipped cards
 
@@ -67,16 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
     resultDisplay.textContent = cardsWon.length / 2;
     if (cardsWon.length / 2 === cardArray.length / 2) {
       messageDisplay.textContent = 'Congratulations! You won!';
-      newGame.addEventListener('click', cleanBoard);
-      newGame.setAttribute('visibility', 'visible')
     };
     flipable = true;
-  }
-
-  function cleanBoard() {
-    let oldimages = document.getElementsByClassName("image");
-    oldimages.forEach(card.remove())
-    createBoard();
   }
 
   // Click on a card flip it showing the image it contains.
@@ -95,7 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   }
 
-  createBoard();
 
 })
 
@@ -108,4 +108,5 @@ document.addEventListener('DOMContentLoaded', () => {
 // Corrected! Background size changes at zoom -> No more.
 // Corrected! Multiple clicks generate a bug. -> No more.
 // Corrected! Show alerts on match, errors, and win. -> No more.
-// Always shows the same images.
+// Corrected! Button is not being showed.
+// Sometimes card doesn't allow to be flipped.

@@ -14,6 +14,7 @@
   cursor: pointer;
   padding: 2px;
 }
+
 .image:active {
   transition: all 0.1s ease;
   transform: rotateY(180deg);
@@ -29,12 +30,9 @@ body {
 
 #newGame {
   background-color:white;
-  color: black;
   border-radius: 5px;
   padding: 10px 20px;
-  border-color: black;
   font-size: large;
-  visibility: hidden;
   margin: 10px;
   cursor: pointer;
   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
@@ -47,7 +45,11 @@ body {
 
 footer {
   background-color: hsla(0, 0%, 100%, 0);
-  width: 20%;
-  align-self: left;
+  width: 250px;
   float: right;
+  color: blue;
+}
+
+#icon {
+  visibility: hidden;
 }
